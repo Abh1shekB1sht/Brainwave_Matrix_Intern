@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Light background */
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #3f51b5; /* Primary color for the heading */
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    transition: color 0.3s;
+}
+
+h1:hover {
+    color: #5c6bc0; /* Lighter shade on hover */
+}
+
+#new-task-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#new-task-input {
+    padding: 12px;
+    width: 70%;
+    border: 2px solid #3f51b5; /* Matching primary color */
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    margin: auto;
+}
+
+#new-task-input:focus {
+    border-color: #5c6bc0; /* Lighter shade on focus */
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #3f51b5; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #5c6bc0; /* Lighter shade on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+#tasks {
+    margin-top: 20px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.task:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+.content {
+    flex-grow: 1;
+}
+
+input.text {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+input[readonly] {
+    background-color: #f9f9f9;
+}
+
+.action button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.2s;
+}
+
+.edit {
+    background-color: #28a745; /* Green for edit */
+}
+
+.edit:hover {
+    background-color: #45bd7c; /* Lighter green on hover */
+    transform: translateY(-1px); /* Subtle lift effect */
+}
+
+.edit:active {
+    transform: scale(0.95); /* Scale down on click */
+}
+
+.delete {
+    background-color: #dc3545; /* Red for delete */
+}
+
+.delete:hover {
+    background-color: #c82333; /* Lighter red on hover */
+    transform: translateY(-1px); /* Subtle lift effect */
+}
+
+.delete:active {
+    transform: scale(0.95); /* Scale down on click */
+}
+
+/* Add a transition effect for the task removal */
+.task.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
